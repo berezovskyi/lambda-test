@@ -23,7 +23,7 @@ AWS Lambda cold start (pseudo-)benchmark
 
 ## Methodology
 
-Dummy (w/o "Hello world") programs were exected on Ubuntu 14.04.3 LTS inside
+Dummy (w/o "Hello world") programs were executed on Ubuntu 14.04.3 LTS inside
 Virtualbox using the following commands. For Python 2.7.6:
 
     cd python
