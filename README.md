@@ -67,3 +67,31 @@ Better (more representative) and/or more extensive (include native process
 invocation time and test C/C++/Go) measurements are more than welcome via pull
 requests!
 
+## Impact
+
+Okay, numbers seem to be within the same order of magnitude, so the question is
+how does it look when converted to $$$?
+
+1. Memory has little or no effect as it is provisioned in chunks of 64MB, thus
+making the differences in startup memory consuption negligible.
+2. Startup time also has *limited* impact on the billing, as it is rounded up
+to the nearest 100ms.
+3. We can calculate, how much would it take to call 1MM functions if they were
+billed without run time rounding.
+
+Base cost for 1MM function calls taking 128MB RAM and running for 1ms:
+
+base = 1000000 * $0.00001667 / 1000 / 1024 * 128 = $0.00208375
+
+I will calculate the cost for 1MM calls according to:
+
+- 20ms startup time for Python ~ $0.041675
+- 40ms startup time for Node.js ~ $0.08335
+- 80ms startup time for Java ~ $0.1667
+
+Additionally, every 1MM requests will incur in $0.20 charge by AWS. Taking into
+account that it looks negligible when compared to actual runtime costs, I think
+it's pretty safe to optimise function performance (or choose the runtime
+accordingly) instead of focusing on startup time unless you run into additional
+100ms cost every function call.
+
