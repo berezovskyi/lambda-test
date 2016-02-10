@@ -21,8 +21,7 @@ AWS Lambda cold start (pseudo-)benchmark
     user	0m1.051s
     sys	    0m0.531s
 
-Methodology
-========================
+# Methodology
 
 Dummy (w/o "Hello world") programs were exected on Ubuntu 14.04.3 LTS inside
 Virtualbox using the following commands. For Python 2.7.6:
