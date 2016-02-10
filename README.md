@@ -17,9 +17,9 @@ AWS Lambda cold start (pseudo-)benchmark
 
     ==> python.run <==
 
-    real	0m1.601s
-    user	0m1.051s
-    sys	    0m0.531s
+    real    0m1.457s
+    user    0m0.901s
+    sys     0m0.531s
 
 ## Methodology
 
