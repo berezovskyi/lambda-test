@@ -95,3 +95,17 @@ it's pretty safe to optimise function performance (or choose the runtime
 accordingly) instead of focusing on startup time unless you run into additional
 100ms cost every function call.
 
+## C & Go comparison just for fun
+
+    ==> output/c.run <==
+
+    real    0m0.040s
+    user    0m0.007s
+    sys 0m0.000s
+
+    ==> output/go.run <==
+
+    real    0m0.081s
+    user    0m0.003s
+    sys 0m0.007s
+
