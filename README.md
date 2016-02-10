@@ -95,6 +95,9 @@ it's pretty safe to optimise function performance (or choose the runtime
 accordingly) instead of focusing on startup time unless you run into additional
 100ms cost every function call.
 
+*Also, 1MM API Gateway requests would cost you $3.50, which means that this
+comparison is virtually useless if you're working on a dirt cheap API backend.*
+
 ## C & Go comparison just for fun
 
     ==> output/c.run <==
