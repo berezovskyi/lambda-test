@@ -112,3 +112,8 @@ comparison is virtually useless if you're working on a dirt cheap API backend.*
     user    0m0.003s
     sys 0m0.007s
 
+## CloudWatch stats for sample microservices deployed (Python & Node.js)
+
+Node.js wins by an order of magnitude
+
+![CloudWatch metrics](results/aws-lambda.png)
