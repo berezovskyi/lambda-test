@@ -13,7 +13,7 @@ AWS Lambda cold start (pseudo-)benchmark
 
 Java wins by an order of magnitude in hot mode (even despite ugly byte-string-json-string-json
 transformation in the code), but has worst case cold start times roughly 
-4 times of Python. I attribute this with the size of the code bundle. After a 
+4 times of Python. I attribute this to the size of the code bundle. After a 
 few iterations, the jar file exploded to 6MB (things escalated pretty quickly!).
 
 ## CloudWatch stats for sample microservices deployed (Python & Node.js)
