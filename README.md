@@ -19,7 +19,8 @@ transformation in the code), but has worst case cold start times roughly
 few iterations, the jar file exploded to 6MB (things escalated pretty quickly!).
 
 > I have managed to reduce the file size down to 4MB by [removing unused classes](https://github.com/berezovskyi/lambda-test-java/commit/593d8f3ed5a7e3afa010ca6707394bca4ff159c5) 
-> from a shaded jar file.
+> from a shaded jar file. And yes, 
+> [it is dangerous](https://github.com/berezovskyi/lambda-test-java/commit/6b1188264fe7bb390fb1a6d969de97a029801806).
 
 ## CloudWatch stats for sample microservices deployed (Python & Node.js)
 
