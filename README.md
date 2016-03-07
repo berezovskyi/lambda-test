@@ -119,8 +119,11 @@ times roughly 4 times of Python. I attribute this with the size of the code
 bundle (after a few iterations, the jar file exploded to 6MB).
 
 On AWS, I used standard "blueprints" for Node.js and Python (I did move dynamodb
-initialization out of the handler in Python code though). This is my attempt
-to mimic their code in Java: https://github.com/berezovskyi/lambda-test-java
+initialization out of the handler in Python code though). Repositories:
+
+- https://github.com/berezovskyi/lambda-test-java
+- https://github.com/berezovskyi/lambda-test-python
+- https://github.com/berezovskyi/lambda-test-node
 
 ![CloudWatch metrics](results/screenshot-0040.png)
 
