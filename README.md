@@ -131,3 +131,7 @@ initialization out of the handler in Python code though). Repositories:
 ![CloudWatch metrics](results/screenshot-0040.png)
 
 *maximum duration within 5-minute interval*
+
+![CloudWatch metrics](results/screenshot-0041.png)
+
+*average duration within 15-minute interval*
