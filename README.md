@@ -114,9 +114,12 @@ comparison is virtually useless if you're working on a dirt cheap API backend.*
 
 ## CloudWatch stats for sample microservices deployed (Python & Node.js)
 
-Java wins by an order of magnitude when in hot mode, has worst case cold start
-times roughly 4 times of Python. I attribute this with the size of the code 
-bundle (after a few iterations, the jar file exploded to 6MB).
+Tests were run with a Python script: https://github.com/berezovskyi/lambda-test-runner
+
+Java wins by an order of magnitude in hot mode (even despite ugly byte-string-json-string-json
+transformation in the code), but has worst case cold start times roughly 
+4 times of Python. I attribute this with the size of the code bundle. After a 
+few iterations, the jar file exploded to 6MB (things escalated pretty quickly!).
 
 On AWS, I used standard "blueprints" for Node.js and Python (I did move dynamodb
 initialization out of the handler in Python code though). Repositories:
