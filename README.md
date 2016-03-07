@@ -134,6 +134,8 @@ comparison is virtually useless if you're working on a dirt cheap API backend.*
 
 ## C & Go comparison just for fun
 
+Actually, a feature request is [under review](https://forums.aws.amazon.com/message.jspa?messageID=694386#694386).
+
     ==> output/c.run <==
 
     real    0m0.040s
