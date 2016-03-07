@@ -1,7 +1,35 @@
 AWS Lambda cold start (pseudo-)benchmark
 ==============================================================================
 
-**tl;dr** Python starts fastest (numbers below are for 100 invocations):
+**tl;dr**
+
+*Maximum duration within a 5-minute interval:*
+
+![Maximum duration within a 5-minute interval](results/screenshot-0040.png)
+
+*Average duration within a 15-minute interval:*
+
+![CloudWatch metrics](results/screenshot-0041.png)
+
+Java wins by an order of magnitude in hot mode (even despite ugly byte-string-json-string-json
+transformation in the code), but has worst case cold start times roughly 
+4 times of Python. I attribute this with the size of the code bundle. After a 
+few iterations, the jar file exploded to 6MB (things escalated pretty quickly!).
+
+## CloudWatch stats for sample microservices deployed (Python & Node.js)
+
+Tests were run with a Python script: https://github.com/berezovskyi/lambda-test-runner
+
+On AWS, I used standard "blueprints" for Node.js and Python (I did move dynamodb
+initialization out of the handler in Python code though). Repositories:
+
+- https://github.com/berezovskyi/lambda-test-java
+- https://github.com/berezovskyi/lambda-test-python
+- https://github.com/berezovskyi/lambda-test-node
+
+## Dummy program start time (local)
+
+Python starts fastest (numbers below are for 100 invocations):
 
     ==> java.run <==
 
@@ -111,27 +139,3 @@ comparison is virtually useless if you're working on a dirt cheap API backend.*
     real    0m0.081s
     user    0m0.003s
     sys 0m0.007s
-
-## CloudWatch stats for sample microservices deployed (Python & Node.js)
-
-Tests were run with a Python script: https://github.com/berezovskyi/lambda-test-runner
-
-Java wins by an order of magnitude in hot mode (even despite ugly byte-string-json-string-json
-transformation in the code), but has worst case cold start times roughly 
-4 times of Python. I attribute this with the size of the code bundle. After a 
-few iterations, the jar file exploded to 6MB (things escalated pretty quickly!).
-
-On AWS, I used standard "blueprints" for Node.js and Python (I did move dynamodb
-initialization out of the handler in Python code though). Repositories:
-
-- https://github.com/berezovskyi/lambda-test-java
-- https://github.com/berezovskyi/lambda-test-python
-- https://github.com/berezovskyi/lambda-test-node
-
-![CloudWatch metrics](results/screenshot-0040.png)
-
-*maximum duration within 5-minute interval*
-
-![CloudWatch metrics](results/screenshot-0041.png)
-
-*average duration within 15-minute interval*
