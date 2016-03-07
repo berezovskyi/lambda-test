@@ -123,3 +123,5 @@ initialization out of the handler in Python code though). This is my attempt
 to mimic their code in Java: https://github.com/berezovskyi/lambda-test-java
 
 ![CloudWatch metrics](results/screenshot-0040.png)
+
+*maximum duration within 5-minute interval*
