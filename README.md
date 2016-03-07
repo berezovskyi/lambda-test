@@ -18,6 +18,9 @@ transformation in the code), but has worst case cold start times roughly
 4 times of Python. I attribute this to the size of the code bundle. After a 
 few iterations, the jar file exploded to 6MB (things escalated pretty quickly!).
 
+> I have managed to reduce the file size down to 4MB by [removing unused classes](https://github.com/berezovskyi/lambda-test-java/commit/593d8f3ed5a7e3afa010ca6707394bca4ff159c5) 
+> from a shaded jar file.
+
 ## CloudWatch stats for sample microservices deployed (Python & Node.js)
 
 Tests were run with a Python script: https://github.com/berezovskyi/lambda-test-runner
