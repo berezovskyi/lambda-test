@@ -1,6 +1,8 @@
 AWS Lambda cold start (pseudo-)benchmark
 ==============================================================================
 
+[![Join the chat at https://gitter.im/berezovskyi/lambda-test](https://badges.gitter.im/berezovskyi/lambda-test.svg)](https://gitter.im/berezovskyi/lambda-test?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/berezovskyi/lambda-test/master/LICENSE) [![Twitter](https://img.shields.io/twitter/url/https/github.com/berezovskyi/lambda-test.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=%5Bobject%20Object%5D)
 
 **tl;dr**
